@@ -90,11 +90,13 @@ export const AppProvider = ({ children }) => {
 
   const onSwitchCurrency = useCallback(async() => {
     dispatch({ type: SWITCH_CURRENCIES });
+    dispatch({ type: SET_TITLE });
    
   }, []);
 
   const onChangeCurrency = useCallback(async (id, name) => {
     dispatch({ type: CHANGE_CURRENCY, payload: { id, name } });
+    dispatch({ type: SET_TITLE });
   }, []);
 
 

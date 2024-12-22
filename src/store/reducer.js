@@ -1,3 +1,4 @@
+import { BASE_CURRENCY } from "../constants";
 import { formatDate } from "../utils/time";
 import {
   SET_TITLE,
@@ -50,8 +51,8 @@ export const appReducer = (state, action) => {
       return {
         ...state,
         currencyOptions: action.payload,
-        fromCurrency: action.payload[1],
-        toCurrency: action.payload[0],
+        fromCurrency: action.payload.find(({ id }) => id === BASE_CURRENCY),
+        toCurrency: action.payload.filter(({ id }) => id !== BASE_CURRENCY)[0],
       };
     default:
       return state;
