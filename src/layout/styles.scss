@@ -1,0 +1,26 @@
+@import "../components/navbar/styles.scss";
+@import "../components/header/styles.scss";
+@import "../components/footer/styles.scss";
+
+.body-layout {
+  background: linear-gradient(to bottom, #1a8dff 355px, #ffffff 0);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__footer {
+    place-self: center;
+    padding: 0px 30px;
+    text-align: start;
+  }
+}
+
+@media (width >= 700px) {
+  .body-layout {
+    &__footer {
+      display: none;
+    }
+  }
+}

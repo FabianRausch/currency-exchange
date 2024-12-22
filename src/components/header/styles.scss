@@ -1,0 +1,22 @@
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    &__title {
+        text-align: center;
+        margin: 0 48px;
+        font-size: 32px;
+        font-weight: 600;
+        height: fit-content;
+        color: #ffffff;
+    }
+}
+
+@media (width >= 700px) {
+    .app-header {
+        padding: 63px;
+    }
+}
+

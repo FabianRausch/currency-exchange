@@ -1,0 +1,128 @@
+@import "../../components/select/styles.scss";
+@import "../../components/textfield/styles.scss";
+
+.currency-exchange {
+  padding: 16px 24px 13px 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 5px 0px #0000001a;
+  border-radius: 8px;
+  margin: 5px 31px;
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    height: 18px;
+    color: #1a8dff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #1a8dff;
+    border-radius: 50%;
+    cursor: pointer;
+    place-self: start;
+    margin: 16px 0;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__select {
+    width: 100%;
+  }
+
+  &__expected {
+    &--primary {
+      padding-top: 16px;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+      text-align: left;
+    }
+
+    &--secondary {
+      margin: 0;
+      color: #757575;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: left;
+    }
+  }
+
+  &__extra-info {
+    display: none;
+  }
+}
+
+@media (width >= 700px) {
+  .currency-exchange {
+    padding: 33px 42px 10px 33px;
+    margin: 10px 77px;
+    height: 402px;
+    width: 1126px;
+
+    &__inputs {
+      flex-direction: row;
+      gap: 7.2%;
+    }
+
+    &__btn {
+      place-self: end;
+    }
+
+    &__content {
+      display: flex;
+      margin-top: 54px;
+      height: 250px;
+      justify-content: space-between;
+    }
+
+    &__expected {
+      display: flex;
+      flex-direction: column;
+
+      &--primary {
+        font-size: 32px;
+        font-weight: 600;
+        max-width: 330px;
+      }
+    }
+
+    &__extra-info {
+      display: flex;
+      flex-direction: column;
+      place-self: end;
+      align-self: flex-end;
+    }
+
+    &__message {
+      place-self: end;
+      background-color: #e8f3ff;
+      display: flex;
+      padding: 19px 17px 14px 31px;
+      max-width: 518px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px 0px #0000000d;
+
+      &--content {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: left;
+      }
+    }
+
+    &__footer {
+      margin-top: 13px;
+      place-self: end;
+    }
+  }
+}

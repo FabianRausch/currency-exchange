@@ -1,0 +1,20 @@
+.app-navbar {
+    display: flex;
+    height: 60px;
+    background-color: #0E1342;
+    align-items: center;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    &__title {
+        color: #FFFFFF;
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+@media (width >= 700px) {
+    .app-navbar {
+        padding-left: 54.6px;
+    }
+}
