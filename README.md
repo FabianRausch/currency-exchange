@@ -3,7 +3,7 @@
 ### Clone the repo
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/FabianRausch/currency-exchange
 ```
 
 ### Go to the project directory

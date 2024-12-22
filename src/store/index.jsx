@@ -60,7 +60,6 @@ const initialState = {
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
   const { id } = state.fromCurrency;
-  console.log(state);
 
   const handleGetRates = useCallback(async() => {
     getLastRates(id)
