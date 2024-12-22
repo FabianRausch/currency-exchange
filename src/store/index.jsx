@@ -83,6 +83,8 @@ export const AppProvider = ({ children }) => {
   }, []);
 
   const onChangeValue = useCallback((e) => {
+    const positiveNumberRegex = /^$|^([0-9]\d*)(\.\d*)?$/;
+      if (!positiveNumberRegex.test(e.target.value)) return;
     dispatch({ type: SET_AMOUNT, payload: e.target.value });
     dispatch({ type: SET_TITLE });
     dispatch({ type: CALCULATE_RESULT });

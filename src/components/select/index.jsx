@@ -51,7 +51,7 @@ const handlePointerDown = () => {
             <li
               key={option.id}
               className={`${namespace}__option ${
-                selectedOption?.id === option.id ? `${namespace}__selected` : ""
+                selectedOption.id === option.id ? `${namespace}__selected` : ""
               }`}
               onClick={() => handleOptionClick(option)}
              

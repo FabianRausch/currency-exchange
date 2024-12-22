@@ -16,17 +16,15 @@ export const appReducer = (state, action) => {
     case SET_TITLE:
       return {
         ...state,
-        titleHeader: `${state.amount} ${state.fromCurrency.id} to ${state.toCurrency.id} - Convert ${state.fromCurrency.name} to ${state.toCurrency.name}`,
+        titleHeader: `${state?.amount} ${state?.fromCurrency.id} to ${state?.toCurrency.id} - Convert ${state?.fromCurrency.name} to ${state?.toCurrency.name}`,
       };
     case SET_AMOUNT:
-      const positiveNumberRegex = /^$|^(0|[1-9]\d*)(\.\d*)?$/;
-      if (!positiveNumberRegex.test(action.payload)) return;
       return { ...state, amount: action.payload };
     case SWITCH_CURRENCIES:
       return {
         ...state,
-        fromCurrency: state.toCurrency,
-        toCurrency: state.fromCurrency,
+        fromCurrency: state?.toCurrency,
+        toCurrency: state?.fromCurrency,
       };
     case CHANGE_CURRENCY:
       const currency = state.currencyOptions.find(
@@ -36,7 +34,7 @@ export const appReducer = (state, action) => {
     case CALCULATE_RESULT:
       return {
         ...state,
-        result: state.rates[state.toCurrency.id] * state.amount,
+        result: state.rates[state.toCurrency.id] * state?.amount,
       };
     case SET_ERROR_MESSAGE:
       return { ...state, loading: false, error: action.payload };
