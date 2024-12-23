@@ -1,8 +1,35 @@
-export const SET_ERROR_MESSAGE = 'SET_ERROR_MESSAGE';
-export const CALCULATE_RESULT = 'CALCULATE_RESULT';
-export const SET_TITLE = 'SET_TITLE';
-export const SET_AMOUNT = 'SET_AMOUNT';
-export const SWITCH_CURRENCIES = 'SWITCH_CURRENCIES';
-export const CHANGE_CURRENCY = 'CHANGE_CURRENCY';
-export const SET_RATES = 'SET_RATES';
-export const SET_CURRENCIES_OPTIONS = 'SET_CURRENCIES_OPTIONS';
+import {
+  CALCULATE_RESULT,
+  CHANGE_CURRENCY,
+  SET_AMOUNT,
+  SET_CURRENCIES_OPTIONS,
+  SET_ERROR_MESSAGE,
+  SET_RATES,
+  SET_TITLE,
+  SWITCH_CURRENCIES,
+} from "./types";
+
+export const setRates = (result) => ({ type: SET_RATES, payload: result });
+
+export const calculateResult = () => ({ type: CALCULATE_RESULT });
+
+export const setErrorMessagge = (error) => ({
+  type: SET_ERROR_MESSAGE,
+  payload: error.message,
+});
+
+export const setCurrencyOptions = (currencyOptions) => ({
+  type: SET_CURRENCIES_OPTIONS,
+  payload: currencyOptions,
+});
+
+export const setAmount = (e) => ({ type: SET_AMOUNT, payload: e.target.value });
+
+export const setTitle = () => ({ type: SET_TITLE });
+
+export const switchCurrencies = () => ({ type: SWITCH_CURRENCIES });
+
+export const changeCurrency = (id, name) => ({
+  type: CHANGE_CURRENCY,
+  payload: { id, name },
+});

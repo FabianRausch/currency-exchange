@@ -9,7 +9,7 @@ import {
   SET_RATES,
   SET_ERROR_MESSAGE,
   SET_CURRENCIES_OPTIONS,
-} from "./actions";
+} from "./types";
 
 export const appReducer = (state, action) => {
   switch (action.type) {
